@@ -1,0 +1,7 @@
+node_modules/
+public/harness-bundle.js
+dist/harness-bundle.js
+dist/harness.html
+.DS_Store
+*.local
+legacy/

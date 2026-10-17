@@ -1,0 +1,27 @@
+{
+    "name": "data-modify-tool",
+    "private": true,
+    "version": "2.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "npm run check && vite build && node scripts/wrap-bookmarklet.mjs",
+        "css": "sass src/styles/styles.scss src/styles/styles.css --no-source-map",
+        "lint": "eslint .",
+        "ts": "tsc --noEmit",
+        "check": "npm run ts && npm run lint",
+        "test": "vitest run",
+        "test:watch": "vitest"
+    },
+    "devDependencies": {
+        "eslint": "^10.9.1",
+        "globals": "^17.11.0",
+        "jsdom": "^30.0.1",
+        "sass": "^1.103.1",
+        "terser": "^5.50.0",
+        "typescript": "^5.9.3",
+        "typescript-eslint": "^8.68.0",
+        "vite": "^8.2.2",
+        "vitest": "^4.1.11"
+    }
+}

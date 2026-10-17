@@ -1,0 +1,99 @@
+.mw-dmt-panes {
+    min-height: 0;
+    padding: 8px 14px 12px;
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+
+    @media (max-width: 560px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.mw-dmt-pane {
+    min-width: 0;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.mw-dmt-pane__head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.mw-dmt-pane__title {
+    font-size: 12px;
+    font-weight: 600;
+    color: #6b6b76;
+}
+
+.mw-dmt-pane__count {
+    font-size: 12px;
+    font-variant-numeric: tabular-nums;
+    color: #94949f;
+}
+
+.mw-dmt-pane__box {
+    all: unset;
+    box-sizing: border-box;
+    min-height: 220px;
+    padding: 8px 10px;
+    flex: 1;
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #e5e5ea;
+    border-radius: 8px;
+    overflow: auto;
+    overscroll-behavior: contain;
+    transition: border-color 150ms, box-shadow 150ms;
+    scrollbar-color: #d4d4d8 transparent;
+    scrollbar-width: thin;
+
+    /* Monospace regardless of the host page's typeface. Data pasted out of a
+       spreadsheet only lines up in columns if the glyphs share a width, and telling
+       an l from a 1 matters more here than matching the surrounding site. */
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #0f1115;
+    resize: none;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+
+    &::placeholder {
+        font-family: inherit;
+        font-size: 12px;
+        color: #b4b4bf;
+        white-space: pre-wrap;
+    }
+
+    &:focus {
+        border-color: #4f46e5;
+        box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+        outline: none;
+    }
+
+    &::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #d4d4d8;
+        border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: #a1a1aa;
+    }
+}

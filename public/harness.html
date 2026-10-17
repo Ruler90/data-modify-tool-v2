@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Hostile host page harness</title>
+<style>
+    /* Deliberately aggressive host-page CSS: the sort of thing a real site does
+       that a badly isolated bookmarklet would inherit and break on. */
+    * { box-sizing: content-box; letter-spacing: 2px; }
+    html, body { margin: 0; background: #123; color: #0f0; font-family: "Comic Sans MS", cursive; font-size: 22px; }
+    div, span, p, label, h2 { border: 3px dashed #f0f !important; text-transform: uppercase; }
+    button { background: #f0f; color: #ff0; border: 6px ridge #0ff; padding: 30px; font-size: 30px; border-radius: 0; }
+    input, textarea { background: #300; color: #0f0; border: 5px double #ff0; font-size: 28px; padding: 20px; text-transform: uppercase; }
+    svg { width: 90px !important; height: 90px !important; }
+    .overlay-hog { position: fixed; inset: 0; z-index: 999999; background: rgba(255,0,0,.25); pointer-events: none; }
+</style>
+</head>
+<body>
+    <div class="overlay-hog"></div>
+    <h2>Host page heading</h2>
+    <p>Host page paragraph that should not be affected.</p>
+    <script src="/harness-bundle.js"></script>
+</body>
+</html>

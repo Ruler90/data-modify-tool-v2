@@ -1,0 +1,41 @@
+.mw-dmt-ops {
+    padding: 12px 14px 4px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mw-dmt-op {
+    display: grid;
+    grid-template-columns: 74px 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+.mw-dmt-op__label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #6b6b76;
+    white-space: nowrap;
+}
+
+.mw-dmt-op__body {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.mw-dmt-op__spacer {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.mw-dmt-op__hint {
+    flex-shrink: 0;
+    padding: 0 1px;
+    font-size: 13px;
+    color: #b4b4bf;
+}
